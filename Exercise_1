@@ -45,3 +45,21 @@ Exercise 1.3
 Exercise 1.4
 If b is positive, then the result will be a + b, if b is negative then the result will be a - -b which is a + b. 
 
+Exercise 1.5
+Normal Order Evaluation:
+
+(test 0 (p))
+(if (= 0 0) 0 (p))
+0
+
+Applicative Order Evaluation:
+(test 0 (p))
+Will infinite loop on the recursive function definition (p)!
+
+
+
+
+
+
+
+
