@@ -48,15 +48,18 @@ Exercise 1.4
 If b is positive, then the result will be a + b, if b is negative then the result will be a - -b which is a + b. 
 
 Exercise 1.5
-Normal Order Evaluation:
 
+Normal Order Evaluation:
 (test 0 (p))
 (if (= 0 0) 0 (p))
-0
+Will return 0
 
 Applicative Order Evaluation:
 (test 0 (p))
 Will infinite loop on the recursive function definition (p)!
+
+Exercise 1.6
+The computation never ends. The reason for this is that new-if is a procedure definition which the interpreter will immediately attempt to evaluate. The real  'built-in' if expression will short circuit when the predicate is true though, so we don't get the same problem.
 
 
 
