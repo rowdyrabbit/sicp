@@ -35,7 +35,7 @@ the direct neighbours of these cells would also have the above rules applied to 
 4. Activator should now download all the required dependencies and start the application when it's done.
 
 To use the API:
-[http://localhost:9000/next-generation?N=5&M=5&liveCells=2,1&liveCells=2,2&liveCells=2,3]
+<http://localhost:9000/next-generation?N=5&M=5&liveCells=2,1&liveCells=2,2&liveCells=2,3>
 
 where N is the width and M is the height and each alive cell is passed as an individual x,y coordinate.
 
@@ -43,4 +43,4 @@ where N is the width and M is the height and each alive cell is passed as an ind
 
 The application has been deployed to Heroku, and can be accessed at the following url:
 
-[http://enigmatic-scrubland-2726.herokuapp.com/next-generation?N=5&M=5&liveCells=2,1&liveCells=2,2&liveCells=2,3]
+<http://enigmatic-scrubland-2726.herokuapp.com/next-generation?N=5&M=5&liveCells=2,1&liveCells=2,2&liveCells=2,3>
