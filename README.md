@@ -19,7 +19,7 @@ This version of the algorithm only computes the neighbours of all the currently 
     - - 1 - -
     - - - - -
 
-the direct neighbours of these cells would also have the above rules applied to them (marked with 'x'):
+only the direct neighbours of these cells would also have the above rules applied to them (marked with 'x'):
 
     - x x x -
     - x 1 x -
@@ -44,3 +44,28 @@ where N is the width and M is the height and each alive cell is passed as an ind
 The application has been deployed to Heroku, and can be accessed at the following url:
 
 <http://enigmatic-scrubland-2726.herokuapp.com/next-generation?N=5&M=5&liveCells=2,1&liveCells=2,2&liveCells=2,3>
+
+It can also be called from jQuery, for example:
+
+    <script>
+        function getNextGeneration() {
+            var liveCells = [[2,1],[2,2],[2,3]];
+            var data = {
+                'M': 5,
+                'N': 5,
+                'liveCells' : liveCells
+            };
+
+            $.ajax({
+                url: "http://enigmatic-scrubland-2726.herokuapp.com/next-generation",
+                jsonp: 'callback',
+                dataType: 'jsonp',
+                data: data,
+                traditional: true,
+                success: function(response) {
+                    var respObj = JSON.stringify(response);
+                    console.log("The response object is: "  + respObj);
+                }
+            });
+        };
+    </script>
