@@ -13,19 +13,19 @@ This application provides an API which given a current generation of cells, will
 Cells on a board are usually laid out sparsely, so to compute the number of neighbours for each cell means there would be a lot of unnecessary checking.
 This version of the algorithm only computes the neighbours of all the currently alive cells and the cells surrounding those alive cells. For example, given the following board:<br/>
 
-- - - - -<br/>
-- - 1 - -<br/>
-- - 1 - -<br/>
-- - 1 - -<br/>
-- - - - -<br/>
+    - - - - -
+    - - 1 - -
+    - - 1 - - 
+    - - 1 - -
+    - - - - -
 
-the direct neighbours of these cells would also have the above rules applied to them (marked with 'x'):<br/>
+the direct neighbours of these cells would also have the above rules applied to them (marked with 'x'):
 
-- x x x -<br/>
-- x 1 x -<br/>
-- x 1 x -<br/>
-- x 1 x -<br/>
-- x x x -<br/>
+    - x x x -
+    - x 1 x -
+    - x 1 x -
+    - x 1 x -
+    - x x x -
 
 
 ## To run the application
@@ -35,7 +35,7 @@ the direct neighbours of these cells would also have the above rules applied to 
 4. Activator should now download all the required dependencies and start the application when it's done.
 
 To use the API:
-http://localhost:9000/next-generation?N=5&M=5&liveCells=2,1&liveCells=2,2&liveCells=2,3
+[http://localhost:9000/next-generation?N=5&M=5&liveCells=2,1&liveCells=2,2&liveCells=2,3]
 
 where N is the width and M is the height and each alive cell is passed as an individual x,y coordinate.
 
